@@ -45,7 +45,7 @@
     <!-- Slide 1 -->
     <div class="slide active" style="background-image: url('#');">
       <div class="slide-content">
-        <img src="assets/logo2.png" alt="" width="200">
+        <img src="assets/logo2.png" alt="" width="200" onclick="activarPantallaCompleta()">
         <h1 id="slide-title-1">PROMO LIKE</h1>
         <p id="slide-description-1">Slogan</p>
       </div>
@@ -94,6 +94,27 @@
       currentSlide = (currentSlide - 1 + slides.length) % slides.length;
       showSlide(currentSlide);
     }
+  </script>
+  <!-- Pantalla Completa -->
+  <script>
+    // Función para activar la pantalla completa
+    function activarPantallaCompleta() {
+      const doc = document.documentElement;
+      if (doc.requestFullscreen) {
+        doc.requestFullscreen();
+      } else if (doc.mozRequestFullScreen) { // Firefox
+        doc.mozRequestFullScreen();
+      } else if (doc.webkitRequestFullscreen) { // Chrome, Safari, Opera
+        doc.webkitRequestFullscreen();
+      } else if (doc.msRequestFullscreen) { // IE/Edge
+        doc.msRequestFullscreen();
+      }
+    }
+
+    // Opción: Activar pantalla completa al cargar la página
+    window.onload = () => {
+      activarPantallaCompleta();
+    };
   </script>
 </body>
 </html>
