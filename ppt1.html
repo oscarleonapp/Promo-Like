@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presentación Web</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body{
+        background-color: #f1f2f3;
+    }
+    .slide {
+      display: none;
+      height: 100vh;
+      color: #f1f2f3;
+      text-align: center;
+      background-size: cover;
+      background-position: center;
+      padding: 50px;
+      /* display: flex; */
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .slide.active {
+      display: flex;
+    }
+    .slide-content {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 80%;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container-fluid">
+    <!-- Slide 1 -->
+    <div class="slide active" style="background-image: url('#');">
+      <div class="slide-content">
+        <img src="assets/logo-png.png" alt="" width="200">
+        <h1 id="slide-title-1">PROMO LIKE</h1>
+        <p id="slide-description-1">Descripción de la primera slide. Puedes personalizar este texto.</p>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide" style="background-image: url('#');">
+      <div class="slide-content">
+        <h1 id="slide-title-2">Título de la Slide 2</h1>
+        <p id="slide-description-2">Descripción de la segunda slide. Más información aquí.</p>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide" style="background-image: url('#');">
+      <div class="slide-content">
+        <h1 id="slide-title-3">Título de la Slide 3</h1>
+        <p id="slide-description-3">Descripción de la tercera slide. Ajusta este texto como desees.</p>
+      </div>
+    </div>
+
+    <!-- Controles de navegación -->
+    <div class="d-flex justify-content-between fixed-bottom mb-3">
+      <button class="btn ml-3" onclick="prevSlide()">Anterior</button>
+      <button class="btn mr-3" onclick="nextSlide()">Siguiente</button>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    }
+  </script>
+</body>
+</html>
