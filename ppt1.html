@@ -16,6 +16,10 @@
   <style>
     body {
       background-color: #002060;
+      transform: scale(0.99); /* Simula un zoom del 75% */
+    transform-origin: center;
+    overflow: hidden;
+
     }
 
     .slide {
@@ -25,7 +29,7 @@
       text-align: center;
       background-size: cover;
       background-position: center;
-      padding: 20px;
+      padding: 10px;
       /* display: flex; */
       justify-content: center;
       align-items: center;
@@ -42,9 +46,9 @@
       padding: 10px;
       min-width: 70%;
       border-radius: 10px;
-      max-width: 100%;
+      max-width: auto;
       margin: auto;
-      height: 70%;
+      height: auto;
     }
 
     .promo-like-amarrillo {
@@ -78,6 +82,7 @@
   .logo-svg{
     color: #002060;
   }
+
   </style>
   <body>
     <main class="page-wrapper">
