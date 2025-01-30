@@ -2563,6 +2563,50 @@ $("#arrowleft" ).trigger( "click" );
 });
 </script>
 
+<!-- <script>
+  document.addEventListener("keydown", function (event) {
+      var slides = document.getElementsByClassName("slide");
+      var activeSlide = document.querySelector(".slide.active");
+      var currentIndex = Array.from(slides).indexOf(activeSlide);
+
+      if (event.key === "ArrowRight" && currentIndex < slides.length - 1) {
+          goToSlide(currentIndex + 2); // Avanza a la siguiente diapositiva
+      } else if (event.key === "ArrowLeft" && currentIndex > 0) {
+          goToSlide(currentIndex);
+      }
+  });
+
+  function goToSlide(slideNumber) {
+      var slides = document.getElementsByClassName("slide");
+      for (var i = 0; i < slides.length; i++) {
+          slides[i].classList.remove("active");
+      }
+      document.getElementById("slide" + slideNumber)?.classList.add("active");
+  }
+</script> -->
+
+      <!-- Pantalla Completa -->
+      <script>
+        // Función para activar la pantalla completa
+        function activarPantallaCompleta() {
+          const doc = document.documentElement;
+          if (doc.requestFullscreen) {
+            doc.requestFullscreen();
+          } else if (doc.mozRequestFullScreen) { // Firefox
+            doc.mozRequestFullScreen();
+          } else if (doc.webkitRequestFullscreen) { // Chrome, Safari, Opera
+            doc.webkitRequestFullscreen();
+          } else if (doc.msRequestFullscreen) { // IE/Edge
+            doc.msRequestFullscreen();
+          }
+        }
+    
+        // Opción: Activar pantalla completa al cargar la página
+        window.onload = () => {
+          activarPantallaCompleta();
+        };
+      </script>
+
   </body>
 </html>
 
