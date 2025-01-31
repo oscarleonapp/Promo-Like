@@ -898,8 +898,8 @@
     <main class="page-wrapper">
       <div class="container-fluid">
 
-        <!-- Slide 1 #### PORTADA #### -->
-        <div class="slide active" style="background-color: #002060;" onclick="activarPantallaCompleta()">
+        <!-- Slide 0 #### PORTADA #### -->
+        <div class="slide active" style="background-color: #002060;" onclick="activarPantallaCompleta()" id="slide0">
           <div class="slide-content borde-personalizado" style="background-color: #fff;">
             <!--hero section start-->
             <section class="jarallax" data-jarallax="" data-speed="0.4">
@@ -952,12 +952,18 @@
                              <p class="fs-xl opacity-70 pb-2 mb-lg-5" style="color: #13161c;">Promociones que emocionan, conectan y transforman.</p>
                            </div>
                            </div>
-                 
+
                          </div>
+                         
                  
                          <!-- Pagination (bullets) -->
                          <!-- <div class="swiper-pagination position-relative d-md-none pt-2 mt-5 swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 2" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span></div> -->
                          <!-- <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div> -->
+
+                         <div class="d-flex justify-content-center fixed-bottom mb-3 gap-3">
+                          <button class="btn mr-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(0)"><i class="bi bi-display-fill"></i></button>
+                          <button class="btn mr-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(1)"><i class="bi bi-arrow-right-circle-fill"></i></button>
+                          </div>
                        </div>
                    </div>
                  </div>
@@ -967,8 +973,8 @@
           </div>
         </div>
 
-         <!-- Slide 2 #### INDICE #### -->
-        <div class="slide" style="background-image: url('#');">
+         <!-- Slide 1 #### INDICE #### -->
+        <div class="slide" style="background-image: url('#');" id="slide1">
           <div class="slide-content borde-personalizado" style="background-image: url('assets/fondo-slide.png');">
             <!--Who we are start-->
             <section class="container my-md-2 my-lg-4 my-xl-5">
@@ -1027,7 +1033,7 @@
                        </div>
                        <div class="mb-0 p-3" style="margin-top: -25px;">
                          <h2 class="h5 mb-0" style="color: #13161c;">
-                           <a onclick="goToSlide(5)" href="#" class="text-reset d-flex justify-content-between align-items-center"
+                           <a onclick="goToSlide(8)" href="#" class="text-reset d-flex justify-content-between align-items-center"
                              data-bs-toggle="collapse" data-bs-target="#collapseCinco" aria-expanded="false"
                              aria-controls="collapseCinco" >
                              Promociones a tu alcance
@@ -1049,7 +1055,7 @@
                        </div>
                        <div class="mb-0 p-3" style="margin-top: -25px;">
                         <h2 class="h5 mb-0" style="color: #13161c;">
-                          <a onclick="goToSlide(6)" href="#" class="text-reset d-flex justify-content-between align-items-center"
+                          <a onclick="goToSlide(9)" href="#" class="text-reset d-flex justify-content-between align-items-center"
                             data-bs-toggle="collapse" data-bs-target="#collapseactivaciones" aria-expanded="false"
                             aria-controls="collapseactivaciones" >
                             Activaciones
@@ -1071,14 +1077,14 @@
                          <h2 class="h5 mb-0" style="color: #13161c;">
                            <a href="#" class="text-reset d-flex justify-content-between align-items-center"
                              data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
-                             aria-controls="collapseOne" onclick="goToSlide(7)">
+                             aria-controls="collapseOne" onclick="goToSlide(10)">
                              Centros de canje
                            </a>
                          </h2>
                        </div>
                        <div class="mb-0 p-3" style="margin-top: -25px;">
                         <h2 class="h5 mb-0" style="color: #13161c;">
-                          <a onclick="goToSlide(8)" href="#" class="text-reset d-flex justify-content-between align-items-center"
+                          <a onclick="goToSlide(11)" href="#" class="text-reset d-flex justify-content-between align-items-center"
                             data-bs-toggle="collapse" data-bs-target="#collapsecreativos" aria-expanded="false"
                             aria-controls="collapsecreativos" >
                             Servicios Creativos
@@ -1098,7 +1104,7 @@
                       </div>
                        <div class="mb-0 p-3" style="margin-top: -25px;">
                          <h2 class="h5 mb-0" style="color: #13161c;">
-                           <a onclick="goToSlide(9)" href="#" class="text-reset d-flex justify-content-between align-items-center"
+                           <a onclick="goToSlide(12)" href="#" class="text-reset d-flex justify-content-between align-items-center"
                              data-bs-toggle="collapse" data-bs-target="#collapseSeis" aria-expanded="false"
                              aria-controls="collapseSeis" >
                              Beneficios
@@ -1118,7 +1124,7 @@
                        </div>
                        <div class="mb-0 p-3" style="margin-top: -25px;">
                         <h2 class="h5 mb-0" style="color: #13161c;">
-                          <a href="#" class="text-reset d-flex justify-content-between align-items-center"
+                          <a onclick="goToSlide(13)" href="#" class="text-reset d-flex justify-content-between align-items-center"
                             data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
                             aria-controls="collapseOne" onclick="goToSlide(10)">
                             Espectáculos y Eventos
@@ -1129,7 +1135,7 @@
                          <h2 class="h5 mb-0" style="color: #13161c;">
                            <a href="#" class="text-reset d-flex justify-content-between align-items-center"
                              data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
-                             aria-controls="collapseOne" onclick="goToSlide(11)">
+                             aria-controls="collapseOne" onclick="goToSlide(19)">
                              Información y contacto
                            </a>
                          </h2>
@@ -1138,7 +1144,13 @@
                      </div>
                    </div>
                  </div>
+
                </div>
+               <div class="d-flex justify-content-center fixed-bottom mb-3 gap-3">
+                <button class="btn ml-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(0)"><i class="bi bi-arrow-left-circle-fill"></i></button>
+                <button class="btn ml-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(1)"><i class="bi bi-app"></i></button>
+                <button class="btn mr-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(2)"><i class="bi bi-arrow-right-circle-fill"></i></button>
+                </div>
              </section>
             <!--Who we are end-->
           </div>
@@ -1146,7 +1158,7 @@
     
         <!-- Slide 2: ACERCA DE -->
         <div class="slide" style="background-image: url('#');" id="slide2">
-          <div class="slide-content borde-personalizado" style="background-image: url('assets/fondo-slide.png');">
+          <div class="slide-content borde-personalizado" style="background-image: url('assets/fondo-slide.png');" onclick="goToSlide(2)">
             <!--Who we are start-->
             <section class="container my-md-2 my-lg-4 my-xl-5">
               <div class="row align-items-center justify-content-center my-1 my-sm-3 my-md-0 my-xl-3">
@@ -1159,7 +1171,13 @@
                   </div>
                 </div>
               </div>
+              <div class="d-flex justify-content-center fixed-bottom mb-3 gap-3">
+                <button class="btn ml-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(1)"><i class="bi bi-arrow-left-circle-fill"></i></button>
+                <button class="btn ml-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(1)"><i class="bi bi-app"></i></button>
+                <button class="btn mr-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(3)"><i class="bi bi-arrow-right-circle-fill"></i></button>
+                </div>
           </section>
+
             <!--Who we are end-->
           </div>
         </div>
@@ -1249,6 +1267,12 @@
                 <!-- ...existing code for remaining slides... -->
                 
               </div>
+              </div>
+              <div class="d-flex justify-content-center fixed-bottom mb-3 gap-3">
+                <button class="btn ml-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(2)"><i class="bi bi-arrow-left-circle-fill"></i></button>
+                <button class="btn ml-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(1)"><i class="bi bi-app"></i></button>
+                <button class="btn mr-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(4)"><i class="bi bi-arrow-right-circle-fill"></i></button>
+                </div>
             </section>
           </div>
         </div>
@@ -1323,12 +1347,17 @@
                   </div>
                 </div>
               </div>
+              <div class="d-flex justify-content-center fixed-bottom mb-3 gap-3">
+                <button class="btn ml-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(3)"><i class="bi bi-arrow-left-circle-fill"></i></button>
+                <button class="btn ml-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(1)"><i class="bi bi-app"></i></button>
+                <button class="btn mr-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(5)"><i class="bi bi-arrow-right-circle-fill"></i></button>
+                </div>
             </section>
           </div>
         </div>
     
         <!-- Slide 5: B2B CANALES DE VENTA -->
-        <div class="slide" style="background-image: url('#');" >
+        <div class="slide" style="background-image: url('#');" id="slide5">
           <div class="slide-content borde-personalizado" style="background-image: url('assets/fondo-slide.png');">
             <section class="container my-md-2 my-lg-4 my-xl-5">
               <div class="row">
@@ -1375,12 +1404,17 @@
                   </div>
                 </div>
               </div>
+              <div class="d-flex justify-content-center fixed-bottom mb-3 gap-3">
+                <button class="btn ml-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(4)"><i class="bi bi-arrow-left-circle-fill"></i></button>
+                <button class="btn ml-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(1)"><i class="bi bi-app"></i></button>
+                <button class="btn mr-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(6)"><i class="bi bi-arrow-right-circle-fill"></i></button>
+                </div>
             </section>
           </div>
         </div>
     
           <!-- Slide 6: BTC PARA CONSUMIDORES FINALES -->
-        <div class="slide" style="background-image: url('#');">
+        <div class="slide" style="background-image: url('#');" id="slide6">
           <div class="slide-content borde-personalizado" style="background-image: url('assets/fondo-slide.png');">
             <section class="container my-md-2 my-lg-4 my-xl-5">
               <div class="row">
@@ -1394,12 +1428,17 @@
                   <p class="d-md-none d-xl-block pb-2 pb-md-3 mb-3" style="color: #13161c;">Nuestra estrategia B2C se centra en conectar de manera efectiva y emotiva con los consumidores finales a través de múltiples canales. <br><br> Nos esforzamos por <b>llegar de forma masiva</b>, maximizando la presencia de la marca y productos en el mercado. <br><br> Implementamos <b>acercamientos face to face</b>, creando experiencias personalizadas y directas que fortalecen la relación con cada cliente. <br><br> Además, aprovechamos el <b>impacto de forma virtual</b>, utilizando tecnologías y plataformas digitales para llegar a los consumidores con campañas innovadoras y atractivas. <br><br> Cada interacción está diseñada para no solo satisfacer, sino superar las expectativas, construyendo relaciones duraderas y significativas con los clientes.</p>
                 </div>
               </div>
+              <div class="d-flex justify-content-center fixed-bottom mb-3 gap-3">
+                <button class="btn ml-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(5)"><i class="bi bi-arrow-left-circle-fill"></i></button>
+                <button class="btn ml-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(1)"><i class="bi bi-app"></i></button>
+                <button class="btn mr-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(7)"><i class="bi bi-arrow-right-circle-fill"></i></button>
+                </div>
             </section>
           </div>
         </div>
     
         <!-- Slide 7: B2E PARA COLABORADORES Y FUERZA DE VENTAS -->
-        <div class="slide" style="background-image: url('#');">
+        <div class="slide" style="background-image: url('#');" id="slide7">
           <div class="slide-content borde-personalizado" style="background-image: url('assets/fondo-slide.png');">
             <section class="container my-md-2 my-lg-4 my-xl-5">
               <div class="row">
@@ -1413,12 +1452,17 @@
                   <p class="d-md-none d-xl-block pb-2 pb-md-3 mb-3" style="color: #13161c;">Valoramos a cada miembro del equipo y reconocemos su importancia en el logro de los objetivos. <br><br> Implementamos programas de <b>incentivos para la fuerza de ventas</b>, recompensando su esfuerzo y resultados excepcionales. <br><br> Además, <b>premiamos a los mejores colaboradores</b>, celebrando su dedicación y contribución. <br><br> <b>Promovemos la motivación al trabajo en equipo</b>, fomentando un ambiente colaborativo y de apoyo mutuo, donde cada individuo se siente valorado y empoderado para dar lo mejor de sí. Nuestra filosofía se centra en el crecimiento y bienestar de nuestros colaboradores, asegurando que su éxito sea también el nuestro.</p>
                 </div>
               </div>
+              <div class="d-flex justify-content-center fixed-bottom mb-3 gap-3">
+                <button class="btn ml-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(6)"><i class="bi bi-arrow-left-circle-fill"></i></button>
+                <button class="btn ml-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(1)"><i class="bi bi-app"></i></button>
+                <button class="btn mr-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(8)"><i class="bi bi-arrow-right-circle-fill"></i></button>
+                </div>
             </section>
           </div>
         </div>
     
-        <!-- Slide 9: PREMIOS A SU ALCANCE -->
-        <div class="slide" style="background-image: url('#');" id="slide5">
+        <!-- Slide 8: PREMIOS A SU ALCANCE -->
+        <div class="slide" style="background-image: url('#');" id="slide8">
           <div class="slide-content borde-personalizado" style="background-image: url('assets/fondo-slide.png');">
             <section class="container my-md-2 my-lg-4 my-xl-5">
               <h2 class="h1 mb-0" style="color: #000;">Premios a su alcance</h2>
@@ -1434,6 +1478,7 @@
                     <i class="bi bi-arrow-bar-right" style="color: #e3c414 !important;"></i>
                   </button>
                 </div>
+                
               </div>
       
               <!-- Swiper slider -->
@@ -1503,7 +1548,7 @@
                           <div class="card-flip-back p-0 bg-transparent" style="position: relative;">
                             <div class="card-body d-flex flex-column justify-content-center align-items-center h-100">
                               <img src="assets/cupon-mania.png" width="200" alt="CSS3">
-                              <h5 style="color: #000;">Cuponmania</h5>
+                              <h5 style="color: #000;">Cuponmanía</h5>
                               <p class="fs-sm mb-0" style="color: #000;">Descuentos en la siguiente compra</p>
                             </div>
                             <a href="https://oscarleonapp.github.io/template-landings-pl/cupon-mania.html" style="z-index: 210;" target="_blank">Landing Page</a>
@@ -1523,7 +1568,7 @@
                           <div class="card-flip-back p-0 bg-transparent" style="position: relative;">
                             <div class="card-body d-flex flex-column justify-content-center align-items-center h-100">
                               <img src="assets/maraton-productos.jpg" width="200" alt="CSS3">
-                              <h5 style="color: #000;">Maraton de productos</h5>
+                              <h5 style="color: #000;">Maratón de productos</h5>
                               <p class="fs-sm mb-0" style="color: #000;">Producto adicional gratis</p>
                             </div>
                             <a href="https://oscarleonapp.github.io/template-landings-pl/maraton-productos.html" style="z-index: 210;" target="_blank">Landing Page</a>
@@ -1575,12 +1620,17 @@
                   </div>
                 <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
               </div>
+              <div class="d-flex justify-content-center fixed-bottom mb-3 gap-3">
+                <button class="btn ml-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(7)"><i class="bi bi-arrow-left-circle-fill"></i></button>
+                <button class="btn ml-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(1)"><i class="bi bi-app"></i></button>
+                <button class="btn mr-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(9)"><i class="bi bi-arrow-right-circle-fill"></i></button>
+                </div>
             </section>
           </div>
         </div>
     
-        <!-- Slide 8: ACTIVACIONES -->
-        <div class="slide" style="background-image: url('#');" id="slide6">
+        <!-- Slide 9: ACTIVACIONES -->
+        <div class="slide" style="background-image: url('#');" id="slide9">
           <div class="slide-content borde-personalizado" style="background-image: url('assets/fondo-slide.png');">
             <section class="container my-md-2 my-lg-4 my-xl-5">
               <h2 class="h1 text-center pb-3 pb-lg-4" style="color: #13161c;">ACTIVACIONES</h2>
@@ -1668,12 +1718,17 @@
                   </div>
                 </div>
               </div>
+              <div class="d-flex justify-content-center fixed-bottom mb-3 gap-3">
+                <button class="btn ml-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(8)"><i class="bi bi-arrow-left-circle-fill"></i></button>
+                <button class="btn ml-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(1)"><i class="bi bi-app"></i></button>
+                <button class="btn mr-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(10)"><i class="bi bi-arrow-right-circle-fill"></i></button>
+                </div>
             </section>
         </div>
         </div>
     
-        <!-- Slide 8: CENTRO DE CANJE -->
-        <div class="slide" style="background-image: url('#');" id="slide7">
+        <!-- Slide 10: CENTRO DE CANJE -->
+        <div class="slide" style="background-image: url('#');" id="slide10">
           <div class="slide-content borde-personalizado" style="background-image: url('assets/fondo-slide.png');">
           <section class="container my-md-2 my-lg-4 my-xl-5">
             <div class="container text-center">
@@ -1715,12 +1770,17 @@
                 </div>
               </section>
             </div>
+            <div class="d-flex justify-content-center fixed-bottom mb-3 gap-3">
+              <button class="btn ml-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(9)"><i class="bi bi-arrow-left-circle-fill"></i></button>
+              <button class="btn ml-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(1)"><i class="bi bi-app"></i></button>
+              <button class="btn mr-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(11)"><i class="bi bi-arrow-right-circle-fill"></i></button>
+              </div>
          </section>
         </div>
         </div>
     
-            <!-- Slide 8: SERVICIOS CREATIVOS -->
-            <div class="slide" style="background-image: url('#');" id="slide8">
+            <!-- Slide 11: SERVICIOS CREATIVOS -->
+            <div class="slide" style="background-image: url('#');" id="slide11">
               <div class="slide-content borde-personalizado" style="background-image: url('assets/fondo-slide.png');">
               <section class="container my-md-2 my-lg-4 my-xl-5">
                 <div class="container text-center"></div>
@@ -1762,12 +1822,17 @@
                   </div>
                  </section>
                 </div>
+                <div class="d-flex justify-content-center fixed-bottom mb-3 gap-3">
+                  <button class="btn ml-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(10)"><i class="bi bi-arrow-left-circle-fill"></i></button>
+                  <button class="btn ml-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(1)"><i class="bi bi-app"></i></button>
+                  <button class="btn mr-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(12)"><i class="bi bi-arrow-right-circle-fill"></i></button>
+                  </div>
              </section>
             </div>
             </div>
         
-        <!-- Slide 5: BENEFICIOS -->
-        <div class="slide" style="background-image: url('#');" id="slide9">
+        <!-- Slide 12: BENEFICIOS -->
+        <div class="slide" style="background-image: url('#');" id="slide12">
           <div class="slide-content borde-personalizado" style="background-image: url('assets/fondo-slide.png');">
             <section class="container my-md-3 my-lg-4 my-xl-5">
               <div class="row align-items-center align-items-xl-end py-2 pb-sm-3 py-5">
@@ -1828,12 +1893,17 @@
                   </div>
                 </div>
               </div>
+              <div class="d-flex justify-content-center fixed-bottom mb-3 gap-3">
+                <button class="btn ml-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(11)"><i class="bi bi-arrow-left-circle-fill"></i></button>
+                <button class="btn ml-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(1)"><i class="bi bi-app"></i></button>
+                <button class="btn mr-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(13)"><i class="bi bi-arrow-right-circle-fill"></i></button>
+                </div>
             </section>
           </div>
         </div>
     
-            <!-- Slide : CINE -->
-            <div class="slide" style="background-image: url('#');" id="slide10">
+            <!-- Slide 13: CINE -->
+            <div class="slide" style="background-image: url('#');" id="slide13">
               <div class="slide-content borde-personalizado"  style="background-image: url('assets/fondo-slide.png');">
                 <!--hero section start-->
                 <section class="container my-md-2 my-lg-4 my-xl-5">
@@ -1845,13 +1915,18 @@
                     <div>ESPECTÁCULOS Y EVENTOS<br />  <span>Incremente sus ventas</span></div>
                     <div>PREMIE A SUS CONSUMIDORES<br />  <span>Entradas al cine Multicadena</span></div>
                     </div>
+                    <div class="d-flex justify-content-center fixed-bottom mb-3 gap-3">
+                      <button class="btn ml-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(12)"><i class="bi bi-arrow-left-circle-fill"></i></button>
+                      <button class="btn ml-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(1)"><i class="bi bi-app"></i></button>
+                      <button class="btn mr-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(14)"><i class="bi bi-arrow-right-circle-fill"></i></button>
+                      </div>
                 </section>
                 <!--hero section end-->
               </div>
             </div>
     
-            <!-- Slide 5: VALOR -->
-            <div class="slide" style="background-image: url('#');" id="slide12">
+            <!-- Slide 14: VALOR -->
+            <div class="slide" style="background-image: url('#');" id="slide14">
               <div class="slide-content borde-personalizado"  style="background-image: url('assets/fondo-slide.png');">
                 <!--hero section start-->
                 <section class="container my-md-2 my-lg-4 my-xl-5">
@@ -1860,8 +1935,8 @@
                     <div class="card1">
                       <div class="poster"><img src="assets/Cine-cap-america.png" alt="Location Unknown"></div>
                       <div class="details">
-                        <h1>Alto Valor Percibido</h1>
-                        <h2>2025 • PG • 1hr 38min</h2>
+                        <h1 style="color: white;">Alto Valor Percibido</h1>
+                        <h2 style="color: white;">2025 • PG • 1hr 38min</h2>
                         <div class="rating">
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
@@ -1893,8 +1968,8 @@
                     <div class="card1">
                       <div class="poster"><img src="assets/cine-jurasic.png" alt="Location Unknown"></div>
                       <div class="details">
-                        <h1>Estrenos Semanales</h1>
-                        <h2>2025 • PG • 24min</h2>
+                        <h1 style="color: white;">Estrenos Semanales</h1>
+                        <h2 style="color: white;">2025 • PG • 24min</h2>
                         <div class="rating">
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
@@ -1925,8 +2000,8 @@
                     <div class="card1">
                       <div class="poster"><img src="assets/cine.joker.png" alt="Location Unknown"></div>
                       <div class="details">
-                        <h1>Alto Impacto</h1>
-                        <h2>2025 • R • 1hr 41min</h2>
+                        <h1 style="color: white;">Alto Impacto</h1>
+                        <h2 style="color: white;">2025 • R • 1hr 41min</h2>
                         <div class="rating">
                           <i class="fas fa-star"></i>
                           <i class="fas fa-star"></i>
@@ -1954,13 +2029,18 @@
                       </div>
                     </div>
                   </div>
+                  <div class="d-flex justify-content-center fixed-bottom mb-3 gap-3">
+                    <button class="btn ml-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(13)"><i class="bi bi-arrow-left-circle-fill"></i></button>
+                    <button class="btn ml-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(1)"><i class="bi bi-app"></i></button>
+                    <button class="btn mr-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(15)"><i class="bi bi-arrow-right-circle-fill"></i></button>
+                    </div>
                 </section>
                 <!--hero section end-->
               </div>
             </div> 
     
-            <!-- Slide 5: PAISES -->
-            <div class="slide" style="background-image: url('#');">
+            <!-- Slide 15: PAISES -->
+            <div class="slide" style="background-image: url('#');" id="slide15">
               <div class="slide-content borde-personalizado"  style="background-image: url('assets/fondo-slide.png');">
                 <!--hero section start-->
                 <section class="container my-md-2 my-lg-4 my-xl-5">
@@ -1984,14 +2064,19 @@
                   <img draggable="false" id="item"  src="assets/panama-cine.png"> 
                     </div>
                   </div>
+                  <div class="d-flex justify-content-center fixed-bottom mb-3 gap-3">
+                    <button class="btn ml-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(14)"><i class="bi bi-arrow-left-circle-fill"></i></button>
+                    <button class="btn ml-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(1)"><i class="bi bi-app"></i></button>
+                    <button class="btn mr-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(16)"><i class="bi bi-arrow-right-circle-fill"></i></button>
+                    </div>
                 </section>
                 <!--hero section end-->
               </div>
             </div>
             
     
-            <!-- Slide 5 -->
-            <div class="slide" style="background-image: url('#');">
+            <!-- Slide 16 -->
+            <div class="slide" style="background-image: url('#');" id="slide16">
               <div class="slide-content borde-personalizado" style="background-color: #ffffff;">
                 <!--hero section start-->
                 <section class="container my-md-2 my-lg-4 my-xl-5">
@@ -2163,14 +2248,19 @@
                       </button>
                     </div>
                   </div>
+                  <div class="d-flex justify-content-center fixed-bottom mb-3 gap-3">
+                    <button class="btn ml-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(15)"><i class="bi bi-arrow-left-circle-fill"></i></button>
+                    <button class="btn ml-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(1)"><i class="bi bi-app"></i></button>
+                    <button class="btn mr-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(17)"><i class="bi bi-arrow-right-circle-fill"></i></button>
+                    </div>
                 </section>
                 <!--hero section end-->
               </div>
             </div> 
     
                     
-            <!-- Slide 5 -->
-            <div class="slide" style="background-image: url('#');">
+            <!-- Slide 17 -->
+            <div class="slide" style="background-image: url('#');" id="slide17">
               <div class="slide-content borde-personalizado"  style="background-image: url('assets/fondo-slide.png');">
                 <!--hero section start-->
                 <section class="container py-5 my-md-2 my-lg-3 my-xl-4 my-xxl-5">
@@ -2239,13 +2329,18 @@
                       </div>
                     </div>
                   </div>
+                  <div class="d-flex justify-content-center fixed-bottom mb-3 gap-3">
+                    <button class="btn ml-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(16)"><i class="bi bi-arrow-left-circle-fill"></i></button>
+                    <button class="btn ml-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(1)"><i class="bi bi-app"></i></button>
+                    <button class="btn mr-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(18)"><i class="bi bi-arrow-right-circle-fill"></i></button>
+                    </div>
                 </section>
                 <!--hero section end-->
               </div>
             </div> 
     
-            <!-- Slide 5 -->
-            <div class="slide" style="background-image: url('#');">
+            <!-- Slide 18 -->
+            <div class="slide" style="background-image: url('#');" id="slide18">
               <div class="slide-content borde-personalizado" style="background-image: url('assets/fondo-slide.png');">
                 <!--Who we are start-->
                 <section class="container my-md-2 my-lg-4 my-xl-5">
@@ -2302,7 +2397,11 @@
                       </div>
                     </div>
                   </div>
-            
+                  <div class="d-flex justify-content-center fixed-bottom mb-3 gap-3">
+                    <button class="btn ml-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(17)"><i class="bi bi-arrow-left-circle-fill"></i></button>
+                    <button class="btn ml-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(1)"><i class="bi bi-app"></i></button>
+                    <button class="btn mr-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(19)"><i class="bi bi-arrow-right-circle-fill"></i></button>
+                    </div>
                 </section>
                 <!--Who we are end-->
               </div>
@@ -2310,8 +2409,8 @@
     
     
     
-        <!-- Slide Final-->
-        <div class="slide" id="slide11">
+        <!-- Slide Final 19-->
+        <div class="slide" id="slide19">
           <div class="slide-content borde-personalizado" style="background-image: url('assets/fondo-slide.png');">
             <!--speak with expert-->
             <section class="my-xl-9 my-5">
@@ -2389,16 +2488,21 @@
                </div>
                  </div>
               </div>
+              <div class="d-flex justify-content-center fixed-bottom mb-3 gap-3">
+                <button class="btn ml-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(18)"><i class="bi bi-arrow-left-circle-fill"></i></button>
+                <button class="btn ml-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(1)"><i class="bi bi-app"></i></button>
+                <!-- <button class="btn mr-3 text-pl-white" style="font-size: 32px;" onclick="goToSlide(0)"><i class="bi bi-arrow-right-circle-fill"></i></button> -->
+                </div>
            </section>
             <!--speak with expert-->
           </div>
         </div>
     
         <!-- Controles de navegación -->
-        <div class="d-flex justify-content-between fixed-bottom mb-3">
+        <!-- <div class="d-flex justify-content-between fixed-bottom mb-3">
           <button class="btn ml-3 text-white" onclick="prevSlide()">Anterior</button>
           <button class="btn mr-3 text-white" onclick="nextSlide()">Siguiente</button>
-        </div>
+        </div> -->
       </div>
     
       <script>
